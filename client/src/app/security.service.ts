@@ -23,7 +23,7 @@ export class SecurityService {
 
   login(username: string, password: string): Observable<User> {
     const headers = new HttpHeaders({
-      authorization: 'Basic' + btoa(username + ':' + password),
+      authorization: 'Basic ' + btoa(username + ':' + password),
       'X-Requested-With': 'XMLHttpRequest',
     });
 
