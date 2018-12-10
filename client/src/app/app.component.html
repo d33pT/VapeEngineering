@@ -1,0 +1,6 @@
+<p>User: {{ user | json}}</p>
+
+<button (click)="loginAsMichi()" *ngIf="!user">Login as Michi</button>
+<button (click)="logout()" *ngIf="user">Logout</button>
+
+<router-outlet></router-outlet>

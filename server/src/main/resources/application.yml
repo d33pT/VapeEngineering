@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC-DATABASE_PASSWORD}
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        glaobally_quoted-identifiers: true
+    hibernate:
+        ddl-auto: update
