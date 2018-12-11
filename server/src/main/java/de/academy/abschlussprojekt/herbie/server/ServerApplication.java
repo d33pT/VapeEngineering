@@ -1,5 +1,8 @@
 package de.academy.abschlussprojekt.herbie.server;
 
+import de.academy.abschlussprojekt.herbie.server.security.SecurityConfiguration;
+import de.academy.abschlussprojekt.herbie.server.user.User;
+import de.academy.abschlussprojekt.herbie.server.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

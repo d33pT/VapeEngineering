@@ -1,4 +1,4 @@
-package de.academy.abschlussprojekt.herbie.server;
+package de.academy.abschlussprojekt.herbie.server.user;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

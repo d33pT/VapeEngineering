@@ -1,5 +1,6 @@
-package de.academy.abschlussprojekt.herbie.server;
+package de.academy.abschlussprojekt.herbie.server.security;
 
+import de.academy.abschlussprojekt.herbie.server.user.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

@@ -1,4 +1,4 @@
-package de.academy.abschlussprojekt.herbie.server;
+package de.academy.abschlussprojekt.herbie.server.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

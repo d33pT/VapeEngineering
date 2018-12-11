@@ -1,5 +1,7 @@
-package de.academy.abschlussprojekt.herbie.server;
+package de.academy.abschlussprojekt.herbie.server.security;
 
+import de.academy.abschlussprojekt.herbie.server.user.User;
+import de.academy.abschlussprojekt.herbie.server.user.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
