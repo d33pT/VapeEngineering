@@ -25,6 +25,9 @@ public class Post {
     public Post() {
     }
 
+    public Post(String title, String text) {
+    }
+
     public Post(String title, String text, User user) {
         this.title = title;
         this.text = text;
