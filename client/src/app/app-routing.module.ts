@@ -4,6 +4,7 @@ import {PostComponent} from './post/post.component';
 
 const routes: Routes = [
   {path: 'post', component: PostComponent}
+  /*{path: 'infos', component: InfoComponent}*/
 ];
 
 
