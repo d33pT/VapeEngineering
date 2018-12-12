@@ -4,6 +4,8 @@
   {{post.title}}<br>{{post.text}}
 </p>
 
+<h3>Neuer Beitrag</h3>
+
 <form (submit)="fillForum()">
   Titel: <input type="text" name="title" [(ngModel)]="newPost.title">
   Text: <input type="text" name="text" [(ngModel)]="newPost.text">
