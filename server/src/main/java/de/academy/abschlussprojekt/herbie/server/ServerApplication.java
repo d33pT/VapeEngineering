@@ -31,6 +31,6 @@ public class ServerApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		userRepository.save(new User("Michi", passwordEncoder.encode("Test")));
-		postRepository.save(new Post("Geiler Scheiß", "Testtext"));
+
 	}
 }
