@@ -28,10 +28,10 @@ public class PostController {
         return beitraege;
     }
 
-    @PostMapping("/api/forum")
-    public List<PostDTO> schreiben(@RequestBody PostDTO postDTO) {
-        postRepository.save(new Post(postDTO.getTitle(), postDTO.getText()));
-        return lesen();
+    @PostMapping("/api/forum")      //RequestBody enthält Anfrage vom Frontend und wandelt sie in Java um
+    public List<PostDTO> schreiben(@RequestBody PostDTO postDTO) { // und diese Methode speichert es in DB
+        postRepository.save(new Post(postDTO.getTitle(), postDTO.getText())); // und schickt per return
+        return lesen();                                             // lesen zum Frontend zurück
     }
 
     @PostConstruct
