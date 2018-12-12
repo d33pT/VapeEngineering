@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -38,6 +37,7 @@ public class PostController {
     public void dummyData() {
         if (postRepository.count() == 0) {
             postRepository.save(new Post("Geiles Stück", "Ich mag Strings!"));
+            postRepository.save(new Post("Juhu!", "Schöne neue Welt"));
         }
     }
 

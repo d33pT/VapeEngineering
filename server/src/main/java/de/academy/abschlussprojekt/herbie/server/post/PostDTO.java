@@ -2,9 +2,9 @@ package de.academy.abschlussprojekt.herbie.server.post;
 
 public class PostDTO {
 
-    private String title = "";
+    private String title;
 
-    private String text = "";
+    private String text;
 
 
     public PostDTO(String title, String text) {
