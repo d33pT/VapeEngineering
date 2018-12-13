@@ -7,11 +7,13 @@ import {HttpClientModule} from '@angular/common/http';
 import { PostComponent } from './post/post.component';
 import {FormsModule} from '@angular/forms';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import { ConfiguratorComponent } from './configurator/configurator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostComponent
+    PostComponent,
+    ConfiguratorComponent
   ],
   imports: [
     BrowserModule,

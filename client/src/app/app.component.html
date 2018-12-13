@@ -18,6 +18,9 @@
       <li class="nav-item">
         <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="configurator" routerLinkActive="active">Configurator</a>
+      </li>
     </ul>
 
   </links>
@@ -42,6 +45,7 @@
 
 <button (click)="loginAsMichi()" *ngIf="!user">Login as Michi</button>
 <button (click)="logout()" *ngIf="user">Logout</button>
+<div class=""></div>
 
 
 <router-outlet></router-outlet>

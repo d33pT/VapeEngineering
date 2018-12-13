@@ -6,6 +6,8 @@ public class PostDTO {
 
     private String text;
 
+    public PostDTO() {
+    }
 
     public PostDTO(String title, String text) {
         this.title = title;
