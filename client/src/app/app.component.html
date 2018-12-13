@@ -8,6 +8,9 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="info" routerLinkActive="active">Infos</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="configurator" routerLinkActive="active">Configurator</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -16,6 +19,7 @@
 
 <button (click)="loginAsMichi()" *ngIf="!user">Login as Michi</button>
 <button (click)="logout()" *ngIf="user">Logout</button>
+<div class=""></div>
 
 
 <router-outlet></router-outlet>
