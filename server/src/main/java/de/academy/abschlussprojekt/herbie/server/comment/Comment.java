@@ -1,26 +1,25 @@
-package de.academy.abschlussprojekt.herbie.server.post;
+package de.academy.abschlussprojekt.herbie.server.comment;
 
-import de.academy.abschlussprojekt.herbie.server.comment.Comment;
+import de.academy.abschlussprojekt.herbie.server.post.Post;
 import de.academy.abschlussprojekt.herbie.server.user.User;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
 
 
+//@Table(name = "comments")
 @Entity
-public class Post {
+//@Data
+public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
-
-    @OneToMany
-    private List<Comment> comments;
 
     @Lob
     private String text;
@@ -30,19 +29,18 @@ public class Post {
 
     private String creationDate;
 
-    public Post() {
-        this.creationDate = formatDateTime(LocalDateTime.now());
-        this.comments = new ArrayList<>();
+
+    public Comment() {
+
     }
 
-    public Post(String title, String text, User user) {
-        this.title = title;
+
+    public Comment(String text, String title, User user) {
         this.text = text;
-        this.creationDate = formatDateTime(LocalDateTime.now());
-        this.comments = new ArrayList<>();
+        this.title = title;
         this.user = user;
+        this.creationDate = formatDateTime(LocalDateTime.now());
     }
-
 
     private static String formatDateTime(LocalDateTime localDateTime) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
@@ -59,37 +57,24 @@ public class Post {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
     public String getText() {
         return text;
     }
 
-    public User getUser() {
-        return user;
+    public void setText(String text) {
+        this.text = text;
     }
 
+    public String getTitle() {
+        return title;
+    }
 
     public void setTitle(String title) {
         this.title = title;
     }
 
-    public List<Comment> getComments() {
-        return comments;
-    }
-
-    public void addComment(Comment comment) {
-        this.comments.add(comment);
-    }
-
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
-
-    public void setText(String text) {
-        this.text = text;
+    public User getUser() {
+        return user;
     }
 
     public void setUser(User user) {

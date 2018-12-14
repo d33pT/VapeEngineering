@@ -1,22 +1,22 @@
 <!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-dark">
 
   <!-- Navbar brand -->
-  <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
+  <mdb-navbar-brand><a class="navbar-brand" href="#">Vape</a></mdb-navbar-brand>
 
   <!-- Collapsible content -->
   <links>
 
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+      <li class="nav-item <!--active-->">
+        <a class="nav-link waves-light" mdbWavesEffect routerLink="product" routerLinkActive="active">Produkte</a> <!--<span class="sr-only">(current)</span></a>-->
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>Features</a>
+        <a class="nav-link waves-light" mdbWavesEffect routerLink="configurator" routerLinkActive="active">Konfigurator</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
+        <a class="nav-link waves-light" mdbWavesEffect routerLink="post" routerLinkActive="active">Forum</a>
       </li>
       <li class="nav-item">
         <a class="nav-link waves-light" mdbWavesEffect routerLink="configurator" routerLinkActive="active">Configurator</a>
@@ -26,6 +26,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link waves-light" mdbWavesEffect routerLink="projectStatus" routerLinkActive="active">Project Status</a>
+        <a class="nav-link waves-light" mdbWavesEffect routerLink="info" routerLinkActive="active">Über uns</a>
       </li>
     </ul>
 

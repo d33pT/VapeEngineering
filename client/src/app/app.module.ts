@@ -10,6 +10,8 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { ConfiguratorComponent } from './configurator/configurator.component';
 import { AboutUsComponent } from './aboutUs/about-us.component';
 import { ProjectStatusComponent } from './projectStatus/project-status.component';
+import {CommentComponent} from './comment/comment.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,10 @@ import { ProjectStatusComponent } from './projectStatus/project-status.component
     ConfiguratorComponent,
     AboutUsComponent,
     ProjectStatusComponent
+    ConfiguratorComponent,
+    CommentComponent
+    ConfiguratorComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
