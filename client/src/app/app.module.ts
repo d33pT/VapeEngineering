@@ -19,9 +19,9 @@ import { ProductComponent } from './product/product.component';
     PostComponent,
     ConfiguratorComponent,
     AboutUsComponent,
-    ProjectStatusComponent
+    ProjectStatusComponent,
     ConfiguratorComponent,
-    CommentComponent
+    CommentComponent,
     ConfiguratorComponent,
     ProductComponent
   ],

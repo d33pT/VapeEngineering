@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'post', component: PostComponent},
   {path: 'configurator', component: ConfiguratorComponent},
   {path: 'aboutUs', component: AboutUsComponent},
-  {path: 'projectStatus', component: ProjectStatusComponent}
+  {path: 'projectStatus', component: ProjectStatusComponent},
   // {path: 'forum', component: ForumComponent}
   {path: 'product', component: ProductComponent}
   /*{path: 'infos', component: InfoComponent}*/
