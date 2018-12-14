@@ -11,10 +11,12 @@ public class SecurityUserDetails implements UserDetails { //Brücke zwischen Use
 
     private String username;
     private String password;
+    private String email;
 
     public SecurityUserDetails(User user) {
         this.username = user.getUsername();
         this.password = user.getPassword();
+        this.email = user.getEmail();
     }
 
 
