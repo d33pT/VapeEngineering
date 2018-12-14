@@ -18,10 +18,6 @@ public class ServerApplication implements CommandLineRunner {
 
 	@Autowired
 	private UserRepository userRepository;
-	@Autowired
-	private PasswordEncoder passwordEncoder;
-	@Autowired
-	private PostRepository postRepository;
 
 
 	public static void main(String[] args) {
@@ -30,7 +26,7 @@ public class ServerApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		userRepository.save(new User("Michi", passwordEncoder.encode("Test")));
+		//userRepository.save(new User());
 
 	}
 }
