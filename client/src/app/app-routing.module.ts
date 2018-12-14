@@ -6,6 +6,7 @@ import {AboutUsComponent} from './aboutUs/about-us.component';
 import {ProjectStatusComponent} from './projectStatus/project-status.component';
 import {ProductComponent} from './product/product.component';
 import {CommentComponent} from './comment/comment.component';
+import {DevelopmentComponent} from './development/development.component';
 
 const routes: Routes = [
   {path: 'post', component: PostComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   // {path: 'forum', component: ForumComponent}
   {path: 'product', component: ProductComponent},
   {path: 'comment', component: CommentComponent},
+  {path: 'development', component: DevelopmentComponent}
   /*{path: 'infos', component: InfoComponent}*/
 ];
 

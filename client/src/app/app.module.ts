@@ -12,6 +12,7 @@ import { AboutUsComponent } from './aboutUs/about-us.component';
 import { ProjectStatusComponent } from './projectStatus/project-status.component';
 import {CommentComponent} from './comment/comment.component';
 import { ProductComponent } from './product/product.component';
+import { DevelopmentComponent } from './development/development.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProductComponent } from './product/product.component';
     ConfiguratorComponent,
     CommentComponent,
     ConfiguratorComponent,
-    ProductComponent
+    ProductComponent,
+    DevelopmentComponent
   ],
   imports: [
     BrowserModule,
