@@ -1,18 +1,26 @@
 package de.academy.abschlussprojekt.herbie.server.post;
 
+import de.academy.abschlussprojekt.herbie.server.comment.Comment;
 import de.academy.abschlussprojekt.herbie.server.user.User;
 
 import javax.persistence.*;
-import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Entity
 public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long Id;
+    private Long id;
 
     private String title;
+
+    @OneToMany
+    private List<Comment> comments;
 
     @Lob
     private String text;
@@ -20,33 +28,35 @@ public class Post {
     @ManyToOne
     private User user;
 
-    private Instant creationDate;
-
+    private String creationDate;
 
     public Post() {
-    }
-
-    public Post(String title, String text) {
-        this.title = title;
-        this.text = text;
+        this.creationDate = formatDateTime(LocalDateTime.now());
+        this.comments = new ArrayList<>();
     }
 
     public Post(String title, String text, User user) {
         this.title = title;
         this.text = text;
+        this.creationDate = formatDateTime(LocalDateTime.now());
+        this.comments = new ArrayList<>();
         this.user = user;
-        this.creationDate = Instant.now();
     }
 
-    public Post(String title, String text, User user, Instant creationDate) {
-        this.title = title;
-        this.text = text;
-        this.user = user;
-        this.creationDate = Instant.now();
+
+    private static String formatDateTime(LocalDateTime localDateTime) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+        return localDateTime.format(formatter);
+
     }
 
-    public long getId() {
-        return Id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -61,7 +71,36 @@ public class Post {
         return user;
     }
 
-    public Instant getCreationDate() {
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void addComment(Comment comment) {
+        this.comments.add(comment);
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getCreationDate() {
         return creationDate;
+    }
+
+    public void setCreationDate(String creationDate) {
+        this.creationDate = creationDate;
     }
 }

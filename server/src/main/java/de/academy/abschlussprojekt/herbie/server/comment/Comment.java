@@ -1,42 +1,59 @@
 package de.academy.abschlussprojekt.herbie.server.comment;
 
+import de.academy.abschlussprojekt.herbie.server.post.Post;
 import de.academy.abschlussprojekt.herbie.server.user.User;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 
+//@Table(name = "comments")
 @Entity
-@Table (name = "comments" )
+//@Data
 public class Comment {
+
     @Id
-    @GeneratedValue
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String title;
 
     @Lob
     private String text;
 
-    private String title;
-
     @ManyToOne
     private User user;
 
-    private Instant creationDate;
+    private String creationDate;
 
 
+    public Comment() {
 
-    public Comment(String text, String title, User user, Instant creationDate) {
+    }
+
+
+    public Comment(String text, String title, User user) {
         this.text = text;
         this.title = title;
         this.user = user;
-        this.creationDate = creationDate;
+        this.creationDate = formatDateTime(LocalDateTime.now());
     }
 
-    public long getId() {
+    private static String formatDateTime(LocalDateTime localDateTime) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+        return localDateTime.format(formatter);
+
+    }
+
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -64,11 +81,11 @@ public class Comment {
         this.user = user;
     }
 
-    public Instant getCreationDate() {
+    public String getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Instant creationDate) {
+    public void setCreationDate(String creationDate) {
         this.creationDate = creationDate;
     }
 }

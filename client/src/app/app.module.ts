@@ -6,14 +6,17 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PostComponent } from './post/post.component';
 import {FormsModule} from '@angular/forms';
-import { ConfiguratorComponent } from './configurator/configurator.component';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import { ConfiguratorComponent } from './configurator/configurator.component';
+import {CommentComponent} from './comment/comment.component';
 import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
+    ConfiguratorComponent,
+    CommentComponent
     ConfiguratorComponent,
     ProductComponent
   ],
