@@ -1,5 +1,8 @@
 package de.academy.abschlussprojekt.herbie.server.user;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.*;
 
 @Entity
@@ -11,19 +14,20 @@ public class User {
 
     @Column(unique = true)
     private String username;
-
     private String password;
+    private String email;
 
     private boolean isAdmin;
 
     public User() {
     }
 
-    public User(String username, String password, boolean isAdmin) {
+    public User(String username, String password, String email) {
+
         this.username = username;
         this.password = password;
+        this.email = email;
         this.isAdmin = isAdmin;
-
     }
 
     public User(String username, String password) {
@@ -55,5 +59,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }
