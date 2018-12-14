@@ -3,15 +3,16 @@ package de.academy.abschlussprojekt.herbie.server.user;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long Id;
 
+    @Column(unique = true)
     private String username;
     private String password;
     private String email;
@@ -22,17 +23,30 @@ public class User {
     }
 
     public User(String username, String password, String email) {
+
         this.username = username;
         this.password = password;
         this.email = email;
+        this.isAdmin = isAdmin;
     }
 
-    public long getId() {
-        return id;
+    public User(String username, String password) {
     }
 
     public String getUsername() {
         return username;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
+    public long getId() {
+        return Id;
     }
 
     public String getPassword() {
@@ -46,6 +60,7 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     public void setEmail(String email) {
         this.email = email;
