@@ -9,13 +9,15 @@ import {FormsModule} from '@angular/forms';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { ConfiguratorComponent } from './configurator/configurator.component';
 import { AboutUsComponent } from './aboutUs/about-us.component';
+import { ProjectStatusComponent } from './projectStatus/project-status.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
     ConfiguratorComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ProjectStatusComponent
   ],
   imports: [
     BrowserModule,
