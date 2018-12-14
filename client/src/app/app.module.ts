@@ -8,12 +8,14 @@ import { PostComponent } from './post/post.component';
 import {FormsModule} from '@angular/forms';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { ConfiguratorComponent } from './configurator/configurator.component';
+import { AboutUsComponent } from './aboutUs/about-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
-    ConfiguratorComponent
+    ConfiguratorComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
