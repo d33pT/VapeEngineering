@@ -1,12 +1,14 @@
 spring:
   datasource:
-    url: ${JDBC_DATABASE_URL}
-    username: ${JDBC_DATABASE_USERNAME}
-    password: ${JDBC-DATABASE_PASSWORD}
+    url: jdbc:mariadb://localhost:3306/herbie
+    username: root
+    password: root
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         glaobally_quoted-identifiers: true
-    hibernate:
-        ddl-auto: update
+        dialect: org.hibernate.dialect.MariaDBDialect
+
