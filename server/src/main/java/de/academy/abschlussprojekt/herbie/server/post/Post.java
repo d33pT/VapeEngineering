@@ -22,6 +22,7 @@ public class Post {
 
     private Instant creationDate;
 
+
     public Post() {
     }
 
@@ -31,6 +32,13 @@ public class Post {
     }
 
     public Post(String title, String text, User user) {
+        this.title = title;
+        this.text = text;
+        this.user = user;
+        this.creationDate = Instant.now();
+    }
+
+    public Post(String title, String text, User user, Instant creationDate) {
         this.title = title;
         this.text = text;
         this.user = user;

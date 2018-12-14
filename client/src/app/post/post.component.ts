@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Post} from './post';
 import {HttpClient} from '@angular/common/http';
+import {User} from '../user';
 
 @Component({
   selector: 'app-post',

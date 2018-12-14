@@ -30,8 +30,6 @@
                 "input": "node_modules/angular-bootstrap-md/scss/mdb-free.scss"
               },
               "src/styles.css"
-//              "src/bootstrap.css",
-//              "src/materials.css"
             ],
             "scripts": []
           },

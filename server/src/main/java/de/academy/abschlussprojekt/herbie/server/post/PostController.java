@@ -21,7 +21,7 @@ public class PostController {
         List<PostDTO> beitraege = new LinkedList<>();
 
         for (Post post : postRepository.findAllByOrderByCreationDateDesc()) {
-            beitraege.add(new PostDTO(post.getTitle(), post.getText()));
+            beitraege.add(new PostDTO(post.getTitle(), post.getText(), post.getUser(), post.getCreationDate()));
         }
 
         return beitraege;
@@ -32,7 +32,7 @@ public class PostController {
 
     @PostMapping("/api/forum")
     public List<PostDTO> schreiben(@RequestBody PostDTO postDTO) {
-        postRepository.save(new Post(postDTO.getTitle(), postDTO.getText()));
+        postRepository.save(new Post(postDTO.getTitle(), postDTO.getText(), postDTO.getUser(), postDTO.getCreationDate()));
         return lesen();
     }
 
